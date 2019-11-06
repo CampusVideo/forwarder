@@ -33,9 +33,9 @@ echo -e "\033[32mSELinux Configuration Finished.\033[0m"
 # NTP & SNMP Config
 echo -e "\033[34mStart Configuring NTP & SNMP Services...\033[0m"
 echo "rocommunity CampUsVidEo" >> /etc/snmp/snmpd.conf
-systemctl start chronyd
+systemctl restart chronyd
 systemctl enable chronyd
-systemctl start snmpd
+systemctl restart snmpd
 systemctl enable snmpd
 echo -e "\033[32mNTP & SNMP Configurations Finished.\033[0m"
 
@@ -52,7 +52,7 @@ url="http://202.112.62.138/nginx-$source-$protocol.conf"
 wget -O nginx.conf.forwarder $url
 cp -f nginx.conf.forwarder /etc/nginx/
 mv -f /etc/nginx/nginx.conf.forwarder /etc/nginx/nginx.conf
-systemctl start nginx
+systemctl restart nginx
 systemctl enable nginx
 echo -e "\033[32mNginx Configurations Finished.\033[0m"
 
