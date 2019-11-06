@@ -83,6 +83,14 @@ firewall-cmd --permanent --zone=work --add-source=ipset:集合名
 firewall-cmd --permanent --zone=work --add-service=http
 ```
 
+* 将 snmp 添加为 public 区域的 service
+
+```bash
+firewall-cmd --permanent --zone=public --add-service=snmp
+```
+
+**自动安装脚本使用统一的 SNMP 团体名。考虑到安全性问题，您可以修改为自定义的团体名，或限制只允许平台网管的 IP 地址访问。您可以 [联系我们](https://github.com/CampusVideo/forwarder/blob/master/contact.md) 获得平台网管服务器地址，或将更改后的 SNMP 团体名告知我们。**
+
 ### 4. 重新加载防火墙规则使其生效
 
 ```bash
