@@ -35,7 +35,8 @@ curl https://raw.githubusercontent.com/CampusVideo/forwarder/master/installer.sh
 请登录操作系统后，在终端执行以下命令，以安装需要使用的软件包。
 
 ```bash
-yum install wget net-tools net-snmp chrony nginx -y
+yum install wget net-tools net-snmp chrony epel-release -y
+yum install nginx -y
 ```
 
 ### 3. 关闭 SELinux
