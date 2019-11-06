@@ -10,6 +10,23 @@ HLS 协议视频流基于 HTTP 协议传输，使用80端口。建议对80端口
 
 ## 操作步骤
 
+### 0. 确认防火墙运行状态
+
+在服务器执行如下命令：
+
+```bash
+firewall-cmd --state
+```
+
+如果返回结果为 `running` 即表示防火墙处于运行状态。
+
+如果结果为 `not running` ，请使用以下命令开启：
+
+```bash
+systemctl start firewalld
+systemctl enable firewalld
+```
+
 ### 1. 建立 ipset 集合
 
 IPv4 与 IPv6 的 ipset 集合需要分别建立。
