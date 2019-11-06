@@ -106,3 +106,9 @@ systemctl enable nginx
 完成以上操作后，您的业务已经配置完成。
 
 但是由于尚未进行防火墙配置，外部系统可能尚不能访问您的业务。您需要参照 [防火墙配置指南](https://github.com/CampusVideo/forwarder/blob/master/firewall.md) 配置防火墙，允许白名单地址访问您服务器80端口的视频业务。
+
+## 后续配置：建设服务节点
+
+本文档描述的内容为建设用于从上游源获取节目流内容并向其他节点提供源转发服务的转发节点。该节点不对最终观看用户提供服务。
+
+播放服务节点的建设文档正在整理中，如您需要建设服务节点向校内用户提供服务，可先参阅 [清华大学开发的IPTV前端](https://github.com/tvly/tvly-web) 或在平台 QQ 、微信群内咨询，也可以选用 [网瑞达公司的商用产品](https://www.wrdtech.com/content/content.php?p=2_30_199) 。
