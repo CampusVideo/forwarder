@@ -21,7 +21,10 @@ echo -e "\033[45;37mStarting Live Streams Forwarder Installation...\033[0m"
 
 # Software packages Installation
 echo -e "\033[34mStart Installing Needed Packages via Yum...\033[0m"
-yum install wget net-tools net-snmp chrony nginx -y
+yum install wget net-tools net-snmp chrony epel-release -y
+yum clean all
+yum makecache
+yum install nginx -y
 echo -e "\033[32mPackages Installation Finished.\033[0m"
 
 # Switch off selinux
