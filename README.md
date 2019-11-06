@@ -1,5 +1,11 @@
 # 分发节点配置指南
 
+常用链接：[联系我们](https://github.com/CampusVideo/forwarder/blob/master/contact.md) | [防火墙配置指南](https://github.com/CampusVideo/forwarder/blob/master/firewall.md)
+
+## 报备节点地址
+
+为了保护视频源服务、视频源设置有访问白名单列表以限制访问范围防止滥用。**在使用以下配置（无论是自动安装脚本还是手工操作）之前，请您先 [联系我们](https://github.com/CampusVideo/forwarder/blob/master/contact.md) 向我们提供您的服务器拟使用的 IP 地址，以便我们为您开通访问权限。否则您将无法完成安装步骤中的配置文件下载过程与后续的视频源访问操作。**
+
 ## 自动安装脚本
 
 为了方便使用，提供了基于全新安装的 CentOS 7/8 操作系统下的自动安装配置脚本。
@@ -56,7 +62,7 @@ sed -i "s/SELINUX=.*/SELINUX=disabled/g" /etc/selinux/config
 
 NTP 服务用于通过网络时钟服务校准您的服务器系统时间；SNMP 服务用于分发平台网管采集您的服务器网络信息绘制分发平台拓扑与流量图。建议您开启这两项服务。
 
-**自动安装脚本与下列命令使用统一的 SNMP 团体名。考虑到安全性问题，您可以修改为自定义的团体名，或限制只允许平台网管的 IP 地址访问。您可以联系我们获得平台网管服务器地址，或将更改后的 SNMP 团体名告知我们。**
+**自动安装脚本与下列命令使用统一的 SNMP 团体名。考虑到安全性问题，您可以修改为自定义的团体名，或限制只允许平台网管的 IP 地址访问。您可以 [联系我们](https://github.com/CampusVideo/forwarder/blob/master/contact.md) 获得平台网管服务器地址，或将更改后的 SNMP 团体名告知我们。**
 
 ```bash
 #向 SNMP 配置文件添加团体名
