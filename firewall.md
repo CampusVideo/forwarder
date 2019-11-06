@@ -10,25 +10,25 @@ HLS 协议视频流基于 HTTP 协议传输，使用80端口。建议对80端口
 
 ## 操作步骤
 
-1. 建立 ipset 集合
+### 1. 建立 ipset 集合
 
 IPv4 与 IPv6 的 ipset 集合需要分别建立。
 
-    - IPv4
+* IPv4
     
-    ```bash
-    firewall-cmd --permanent --new-ipset=whitelist --type=hash:net
-    ```
+```bash
+firewall-cmd --permanent --new-ipset=whitelist --type=hash:net
+```
 
-    - IPv6
+* IPv6
 
-    ```bash
-    firewall-cmd --permanent --new-ipset=whitelist6 --type=hash:net --option=family=inet6
-    ```
+```bash
+firewall-cmd --permanent --new-ipset=whitelist6 --type=hash:net --option=family=inet6
+```
 
 这样就分别对 IPv4 与 IPv6 建立了 ipset 集合。其中前者的集合名为 whitelist ，后者为 whitelist6 。
 
-2. 编辑集合内容
+### 2. 编辑集合内容
 
 向集合添加 IP 地址或者 CIDR 区块时，需将对应协议的地址添加到对应协议的 ipset 集合中。
 
@@ -48,25 +48,25 @@ firewall-cmd --permanent --ipset=集合名 --get-entries
 firewall-cmd --permanent --ipset=集合名 --remove-entry=地址或CIDR
 ```
 
-3. 将集合添加到防火墙区域
+### 3. 将集合添加到防火墙区域
 
 在本示例中，我们使用防火墙的 work 区域
 
-    - 将 ipset 添加为区域的 source
+* 将 ipset 添加为区域的 source
 
-    ```bash
-    firewall-cmd --permanent --zone=work --add-source=ipset:集合名
-    ```
+```bash
+firewall-cmd --permanent --zone=work --add-source=ipset:集合名
+```
 
-    如果同时使用IPv4 与 IPv6 的 ipset ，需在这里将二者都添加进来。
+如果同时使用IPv4 与 IPv6 的 ipset ，需在这里将二者都添加进来。
 
-    - 将 http 添加为区域的 service
+* 将 http 添加为区域的 service
 
-    ```bash
-    firewall-cmd --permanent --zone=work --add-service=http
-    ```
+```bash
+firewall-cmd --permanent --zone=work --add-service=http
+```
 
-4. 重新加载防火墙规则使其生效
+### 4. 重新加载防火墙规则使其生效
 
 ```bash
 firewall-cmd --reload
