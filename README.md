@@ -120,4 +120,6 @@ systemctl enable nginx
 
 本文档描述的内容为建设用于从上游源获取节目流内容并向其他节点提供源转发服务的转发节点。该节点不对最终观看用户提供服务。
 
-播放服务节点的建设文档正在整理中，如您需要建设服务节点向校内用户提供服务，可先参阅 [清华大学开发的IPTV前端](https://github.com/tvly/tvly-web) 或在平台 QQ 、微信群内咨询，也可以选用 [网瑞达公司的商用产品](https://www.wrdtech.com/content/content.php?p=2_30_199) 。
+播放服务节点的建设文档参见[服务节点配置](https://github.com/CampusVideo/frontend)，如您需要建设服务节点向校内用户提供服务，可先参阅 [清华大学开发的IPTV前端](https://github.com/tvly/tvly-web) 或在平台 QQ 、微信群内咨询。
+
+推荐选用 [网瑞达公司的商用产品](https://www.wrdtech.com/content/content.php?p=2_30_199) 。
