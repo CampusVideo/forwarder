@@ -1,3 +1,11 @@
+# 视频分发
+
+![desc.png](https://raw.github.com/CampusVideo/forwarder/master/desc.png)
+
+本文档描述的内容为建设用于从上游源获取节目流内容并向其他节点提供源转发服务的转发节点。该节点不对最终观看用户提供服务。
+
+服务节点配置文档见 [服务节点配置](https://github.com/CampusVideo/frontend)
+
 # 分发节点配置指南
 
 常用链接：[联系我们](https://github.com/CampusVideo/forwarder/blob/master/contact.md) | [防火墙配置指南](https://github.com/CampusVideo/forwarder/blob/master/firewall.md)
