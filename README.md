@@ -13,7 +13,7 @@
 您可在操作系统安装完成并且成功配置网络连接后通过以下方式使用：
 
 ```bash
-curl https://raw.githubusercontent.com/CampusVideo/forwarder/master/installer.sh | sh
+sh -c "$(curl -sSL https://raw.githubusercontent.com/CampusVideo/forwarder/master/installer.sh)"
 ```
 
 在自动安装脚本执行完成后，您只需要手工配置防火墙即可。防火墙配置方法可参阅我们的文档：[防火墙配置指南](https://github.com/CampusVideo/forwarder/blob/master/firewall.md)
